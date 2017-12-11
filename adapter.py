@@ -140,9 +140,16 @@ def position_to_chw (position):
 
     return bbs_chw
 
+# def position_to_hwc (position):
+#     """Returns all model input feature planes from position in hwc format."""
+#     bbs_chw = position_to_chw(position) 
+
+#     # chw -> hwc
+#     return bbs_chw.transpose((1, 2, 0))
+
 def position_to_hwc (position):
     """Returns all model input feature planes from position in hwc format."""
-    bbs_chw = position_to_chw(position) 
+    bbs = position_to_legal_bbs(position)
+    bbs = bbs.reshape((8, 8, 64))
 
-    # chw -> hwc
-    return bbs_chw.transpose((1, 2, 0))
+    return bbs

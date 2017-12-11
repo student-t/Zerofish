@@ -24,7 +24,7 @@ config = util.AttrDict (**{
     'batch_size' : 32,
 
     'filters' : 32,
-    'modules' : 0,
+    'modules' : 2,
 
     # Not parsed from command line
     'input_height' : 8,
