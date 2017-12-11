@@ -23,13 +23,13 @@ config = util.AttrDict (**{
     'num_epochs' : 1,
     'batch_size' : 32,
 
-    'filters' : 32,
+    'filters' : 64,
     'modules' : 2,
 
     # Not parsed from command line
     'input_height' : 8,
     'input_width' : 8,
-    'input_channels' : 26,
+    'input_channels' : 64,
 
     'classes_shape' : (8, 8, 8, 8),
 
